@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-­width, initial-scale=1"/> 
+		<title>BMI</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="js/page.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<h1>BMI Calculator</h1>
+		<p>Get your bmi</p>
+		<form name="bmiForm" oninput=updateBMI()>
+			<p>Enter your height (cm) and weight (kg):</p>
+			<input id="height" type="number" min="50" max="300">cm<br>
+			<input id="weight" type="number" min="10" max="300">kg<br>
+			BMI= <output id="bmiOutput" name="bmiText" for="height weight"></output>
+		</form>
+	</body>
+</html>

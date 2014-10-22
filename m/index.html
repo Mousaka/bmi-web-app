@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BMI</title>
+		<meta charset="UTF-8"/>
+
+		<meta name="viewport" content="width=device-­width, initial‐scale=1, maximum-scale=1"/> 
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+		
+	</head>
+	<body>
+		<div data-role="page">
+
+			<div data-role="header"  data-theme="b">
+				<h1>BMI Calculator</h1>
+			</div><!-- /header -->
+
+			<div data-role="content"  data-theme="b">	
+				<h2>Get your BMI</h2>
+				<form oninput=updateBMI()>
+					<div id = "div-sliders">
+   						<label for="height" id="h">Your height in cm:</label>
+  						<input type="range" name="slider" id="height" value="165" min="50" max="250"  />
+   						<label for="weight" id="w">Your weight in kg:</label>
+  						<input type="range" name="slider" id="weight" value="50" min="20" max="200"  />
+  					</div>
+  					<div id="yourBmi" align=center>
+  						<h3>Your BMI is</h3>
+  						<h2 id="bmiOutput"></h2> 
+  					</div>
+				</form>
+			</div><!-- /content -->
+		</div><!-- /page -->
+		<script src="js/page.js"></script>
+	</body>
+</html>
