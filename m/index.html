@@ -9,15 +9,16 @@
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
 		
+		<canvas id="can" width="300" height="225"></canvas>
 	</head>
 	<body>
-		<div data-role="page">
+		<div data-role="page" id="thepage">
 
 			<div data-role="header"  data-theme="b">
 				<h1>BMI Calculator</h1>
 			</div><!-- /header -->
 
-			<div data-role="content"  data-theme="c">	
+			<div data-role="content" id="cont" data-theme="c">	
 				<h2>Get your BMI</h2>
 				<form oninput=updateBMI()>
 					<div id = "div-sliders">
@@ -40,5 +41,6 @@
 		</div><!-- /page -->
 
 		<script src="js/page.js"></script>
+		<script src="js/drawing.js"></script>
 	</body>
 </html>
