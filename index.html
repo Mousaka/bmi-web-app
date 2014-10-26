@@ -1,20 +1,46 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-­width, initial-scale=1"/> 
 		<title>BMI</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<script src="js/page.js" type="text/javascript"></script>
+		<meta charset="UTF-8"/>
+
+		<meta name="viewport" content="width=device-­width, initial‐scale=1, maximum-scale=1"/> 
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+		
+		<canvas id="can" width="300" height="225"></canvas>
 	</head>
 	<body>
-		<h1>BMI Calculator</h1>
-		<p>Get your bmi</p>
-		<form name="bmiForm" oninput=updateBMI()>
-			<p>Enter your height (cm) and weight (kg):</p>
-			<input id="height" type="number" min="50" max="300">cm<br>
-			<input id="weight" type="number" min="10" max="300">kg<br>
-			BMI= <output id="bmiOutput" name="bmiText" for="height weight"></output>
-		</form>
+		<div data-role="page" id="thepage">
+
+			<div data-role="header"  data-theme="b">
+				<h1>BMI Calculator</h1>
+			</div><!-- /header -->
+
+			<div data-role="content" id="cont" data-theme="c">	
+				<h2>Get your BMI</h2>
+				<form oninput=updateBMI()>
+					<div id = "div-sliders">
+   						<label for="height" id="h">Your height in cm:</label>
+  						<input type="range" name="slider" id="height" value="165" min="50" max="250"  />
+   						<label for="weight" id="w">Your weight in kg:</label>
+  						<input type="range" name="slider" id="weight" value="50" min="20" max="200"  />
+  					</div>
+  					<div id="yourBmi" align=center>
+  						<h3>Your BMI is</h3>
+  						<h2 id="bmiOutput"></h2> 
+  					</div>
+				</form>
+			</div><!-- /content -->
+			<div data-role="footer" data-teme="b" data-position="fixed" align=center>
+				<p> 
+					by Li and Kristian
+				</p>
+			</div>
+		</div><!-- /page -->
+
+		<script src="js/page.js"></script>
+		<script src="js/drawing.js"></script>
 	</body>
 </html>

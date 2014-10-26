@@ -1,14 +1,16 @@
-if (screen.width <= 699) {
-document.location = "m/index.html";
-}
+
+
+$("#div-sliders").change(function() {
+  updateBMI();
+});
 
 function updateBMI(){
 	
 	var bmi = calculate(getHeight()/100, getWeight());
-	console.log("getHeight: "+ getHeight()+" getWeight: "+ getWeight() + " BMi= "+ bmi);
+	//console.log("getHeight: "+ getHeight()+" getWeight: "+ getWeight() + " BMi= "+ bmi);
 	if(bmi!=-1){
-		console.log("Updating BMI to "+ bmi);
-		document.getElementById("bmiOutput").value = Math.round(bmi);
+	//	console.log("Updating BMI to "+ bmi);
+		$("#bmiOutput").html(Math.round(bmi));
 	}
 }
 function getWeight(){
